@@ -1,0 +1,6 @@
+framework module Pods_Spreadly {
+  umbrella header "Pods-Spreadly-umbrella.h"
+
+  export *
+  module * { export * }
+}

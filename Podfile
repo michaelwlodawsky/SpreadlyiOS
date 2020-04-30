@@ -7,6 +7,8 @@ target 'Spreadly' do
 
   # Pods for Spreadly
   pod 'Firebase'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'SpreadlyTests' do
     inherit! :search_paths

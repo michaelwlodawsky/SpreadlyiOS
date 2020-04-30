@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		3D7ACA43245A8B3A00508C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7ACA41245A8B3A00508C7D /* LaunchScreen.storyboard */; };
 		3D7ACA4E245A8B3A00508C7D /* SpreadlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA4D245A8B3A00508C7D /* SpreadlyTests.swift */; };
 		3D7ACA59245A8B3A00508C7D /* SpreadlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA58245A8B3A00508C7D /* SpreadlyUITests.swift */; };
+		3D7ACA67245A9A1D00508C7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D7ACA66245A9A1D00508C7D /* GoogleService-Info.plist */; };
 		6DE888E2B3B2F36750559BDB /* Pods_Spreadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A29E7375BEE3626E170B8E /* Pods_Spreadly.framework */; };
 		8C1DD64BE166A4CC63AC4C27 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC2C1C02C5A208049E561EF /* Pods_Spreadly_SpreadlyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		3D7ACA54245A8B3A00508C7D /* SpreadlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreadlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7ACA58245A8B3A00508C7D /* SpreadlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadlyUITests.swift; sourceTree = "<group>"; };
 		3D7ACA5A245A8B3A00508C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7ACA66245A9A1D00508C7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45A29E7375BEE3626E170B8E /* Pods_Spreadly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA72B62424C360CF7B4B072A /* Pods-Spreadly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.release.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.release.xcconfig"; sourceTree = "<group>"; };
 		D23A2084D2B18C1BFA5A7858 /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly-SpreadlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		3D7ACA32245A8B3800508C7D /* Spreadly */ = {
 			isa = PBXGroup;
 			children = (
+				3D7ACA66245A9A1D00508C7D /* GoogleService-Info.plist */,
 				3D7ACA33245A8B3800508C7D /* AppDelegate.swift */,
 				3D7ACA35245A8B3800508C7D /* SceneDelegate.swift */,
 				3D7ACA37245A8B3800508C7D /* ViewController.swift */,
@@ -158,7 +161,6 @@
 				2F868C94C52F82B2902A7A1A /* Pods-SpreadlyTests.debug.xcconfig */,
 				05DF0B1B224DA0D51A8BC783 /* Pods-SpreadlyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7ACA67245A9A1D00508C7D /* GoogleService-Info.plist in Resources */,
 				3D7ACA43245A8B3A00508C7D /* LaunchScreen.storyboard in Resources */,
 				3D7ACA40245A8B3A00508C7D /* Assets.xcassets in Resources */,
 				3D7ACA3B245A8B3800508C7D /* Main.storyboard in Resources */,

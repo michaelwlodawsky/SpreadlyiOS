@@ -82,7 +82,7 @@
         <!--Menu View Controller-->
         <scene sceneID="mrx-Zr-ezr">
             <objects>
-                <viewController id="8Nt-mw-Vfu" customClass="MenuViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuVC" id="8Nt-mw-Vfu" customClass="MenuViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mr5-oQ-AlN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

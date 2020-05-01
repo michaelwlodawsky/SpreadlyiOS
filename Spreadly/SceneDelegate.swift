@@ -28,6 +28,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             exit(-1)
         }
         appDelegate.query = URLContexts.first?.url.query
+        // Automatically present menu from User's Camera
+        let tabBarController = self.window?.rootViewController?.children.first
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuVC = storyboard.instantiateViewController(identifier: "menuVC")
+        tabBarController?.navigationController?.pushViewController(menuVC, animated: true)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

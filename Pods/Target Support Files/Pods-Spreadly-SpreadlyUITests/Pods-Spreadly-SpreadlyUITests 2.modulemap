@@ -1,0 +1,6 @@
+framework module Pods_Spreadly_SpreadlyUITests {
+  umbrella header "Pods-Spreadly-SpreadlyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

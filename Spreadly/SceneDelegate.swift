@@ -40,8 +40,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        let vc = self.window?.rootViewController as! ViewController
-        vc.readFirebase()
+        
+        // NOTE: This will need to be updated if the root viewcontrollers are modified
+        //self.window?.rootViewController?.children.first?.children.first?.viewDidLoad()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -52,9 +53,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        print("enter foreground")
-        let vc = self.window?.rootViewController as! ViewController
-        vc.readFirebase()
+//        print("enter foreground")
+//        let vc = self.window?.rootViewController as! ViewController
+//        vc.readFirebase()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

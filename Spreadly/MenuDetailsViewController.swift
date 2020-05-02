@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  MenuDetailsViewController.swift
 //  Spreadly
 //
-//  Created by Michael Wlodawsky on 4/29/20.
+//  Created by Michael Wlodawsky on 5/1/20.
 //  Copyright © 2020 Spreadly. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class HomeViewController: UIViewController {
+class MenuDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-}
 
+    }
+
+}

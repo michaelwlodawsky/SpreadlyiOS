@@ -20,6 +20,9 @@
 		3D7D9F45245CA5F800D3D091 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F44245CA5F700D3D091 /* HomeViewController.swift */; };
 		3D7D9F47245CAF8700D3D091 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F46245CAF8700D3D091 /* CameraViewController.swift */; };
 		3D7D9F49245CC22500D3D091 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F48245CC22500D3D091 /* MenuViewController.swift */; };
+		3D7D9F4B245D313D00D3D091 /* MenuDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */; };
+		3D7D9F4D245D359500D3D091 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */; };
+		3D7D9F4F245D365200D3D091 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4E245D365200D3D091 /* DataTypes.swift */; };
 		7942D1E9F48F797C695B2C62 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8A5AFD6F4634A02F0A2E60 /* Pods_Spreadly_SpreadlyUITests.framework */; };
 		DBC4F87240B1A1A57F6B0882 /* Pods_SpreadlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49CF13461BC901D9C3F2AA4 /* Pods_SpreadlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,9 @@
 		3D7D9F44245CA5F700D3D091 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D7D9F46245CAF8700D3D091 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3D7D9F48245CC22500D3D091 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsViewController.swift; sourceTree = "<group>"; };
+		3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		3D7D9F4E245D365200D3D091 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		5F3765B77BDC135755F170C9 /* Pods_Spreadly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4407BCB77F6101A492701A /* Pods-Spreadly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.release.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.release.xcconfig"; sourceTree = "<group>"; };
 		80EF24A16CB02E8B5CAB4EE9 /* Pods-Spreadly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.debug.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 				3D7ACA3C245A8B3800508C7D /* Spreadly.xcdatamodeld */,
 				3D7D9F46245CAF8700D3D091 /* CameraViewController.swift */,
 				3D7D9F48245CC22500D3D091 /* MenuViewController.swift */,
+				3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */,
+				3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */,
+				3D7D9F4E245D365200D3D091 /* DataTypes.swift */,
 			);
 			path = Spreadly;
 			sourceTree = "<group>";
@@ -422,8 +431,11 @@
 			files = (
 				3D7ACA3E245A8B3800508C7D /* Spreadly.xcdatamodeld in Sources */,
 				3D7D9F49245CC22500D3D091 /* MenuViewController.swift in Sources */,
+				3D7D9F4D245D359500D3D091 /* MenuTableViewCell.swift in Sources */,
+				3D7D9F4F245D365200D3D091 /* DataTypes.swift in Sources */,
 				3D7D9F47245CAF8700D3D091 /* CameraViewController.swift in Sources */,
 				3D7ACA34245A8B3800508C7D /* AppDelegate.swift in Sources */,
+				3D7D9F4B245D313D00D3D091 /* MenuDetailsViewController.swift in Sources */,
 				3D7ACA36245A8B3800508C7D /* SceneDelegate.swift in Sources */,
 				3D7D9F45245CA5F800D3D091 /* HomeViewController.swift in Sources */,
 			);

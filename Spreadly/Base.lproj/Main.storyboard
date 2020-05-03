@@ -145,6 +145,12 @@
                                                 <constraint firstItem="Sha-KH-zat" firstAttribute="leading" secondItem="smJ-7G-HOK" secondAttribute="trailing" constant="8" id="uYc-xE-lhR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemDescription" destination="ys9-kx-dHD" id="AbM-jk-yXZ"/>
+                                            <outlet property="itemImage" destination="vtm-Lf-Ocy" id="xYI-Vi-r1R"/>
+                                            <outlet property="itemName" destination="smJ-7G-HOK" id="mPW-6Y-K97"/>
+                                            <outlet property="itemPrice" destination="Sha-KH-zat" id="1t4-Q5-Gtv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

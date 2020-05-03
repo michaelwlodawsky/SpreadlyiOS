@@ -8,11 +8,12 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let tempArr: [String] = []
+    var menu: [MenuItem] = []
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,6 +22,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         let backButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(back))
         self.navigationItem.leftBarButtonItem = backButton
+        
+        // TODO: Get menu from Firebase
+        // Test Code only
+        let item = MenuItem(name: "Test of a long item string?", type: "entree", price: 199.99, description: "I am only a test of a very very very long description thing lets see how long we can make this bitch gooooooooooooo.", ingredients: ["foo", "bar"], sides: ["foo"], pescatarian: false, vegan: true, gf: false, vegetarian: false)
+        menu.append(item)
     }
     
     @objc func back(sender: UIBarButtonItem) {
@@ -29,12 +35,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Fix with real datastructure
-        tempArr.count
+        return menu.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuTableViewCell
+        let item = menu[indexPath.row]
+        
+        cell.itemName.text = item.name
+        cell.itemPrice.text = String(format: "$%0.2f", item.price)
+        cell.itemDescription.text = item.description ?? ""
+        cell.itemImage.image = UIImage(named: "Burrito.jpeg")
+        
         return cell
     }
     
@@ -51,6 +64,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
+    }
+    
+    func getImage(imagePath: String) -> UIImage {
+        // TODO: Get image from Firebase
+        return UIImage()
     }
 
 }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25E6893266F4BC4F96FAFE29 /* Pods_Spreadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3765B77BDC135755F170C9 /* Pods_Spreadly.framework */; };
+		349196C430085C57D2F7D597 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2FC416B46BCF94493C871 /* Pods_Spreadly_SpreadlyUITests.framework */; };
+		3D2B645E2462006500452BF5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2B645D2462006500452BF5 /* Default.png */; };
 		3D7ACA34245A8B3800508C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA33245A8B3800508C7D /* AppDelegate.swift */; };
 		3D7ACA36245A8B3800508C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA35245A8B3800508C7D /* SceneDelegate.swift */; };
 		3D7ACA3B245A8B3800508C7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7ACA39245A8B3800508C7D /* Main.storyboard */; };
@@ -24,8 +25,8 @@
 		3D7D9F4D245D359500D3D091 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */; };
 		3D7D9F4F245D365200D3D091 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4E245D365200D3D091 /* DataTypes.swift */; };
 		3D7D9F51245E54C100D3D091 /* Burrito.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D9F50245E54C100D3D091 /* Burrito.jpeg */; };
-		7942D1E9F48F797C695B2C62 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8A5AFD6F4634A02F0A2E60 /* Pods_Spreadly_SpreadlyUITests.framework */; };
-		DBC4F87240B1A1A57F6B0882 /* Pods_SpreadlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49CF13461BC901D9C3F2AA4 /* Pods_SpreadlyTests.framework */; };
+		417ADF2F5AD158B63BD38D5B /* Pods_SpreadlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C39977CFC22C93E57ECF2BE /* Pods_SpreadlyTests.framework */; };
+		EC2043683516822824D0A3EC /* Pods_Spreadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CB138641D6A8A59C4691E9 /* Pods_Spreadly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C1F076C4FF4C6FABCDD3B0F /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly-SpreadlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		13BB79C89476F54D52355758 /* Pods-Spreadly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.debug.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.debug.xcconfig"; sourceTree = "<group>"; };
+		1A33DF0E65E2783E115BAF1A /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly-SpreadlyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E555A52A2A5EC140A1F37EC /* Pods-SpreadlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreadlyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpreadlyTests/Pods-SpreadlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38CB138641D6A8A59C4691E9 /* Pods_Spreadly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D2B645D2462006500452BF5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3D7ACA30245A8B3800508C7D /* Spreadly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7ACA33245A8B3800508C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D7ACA35245A8B3800508C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,14 +74,11 @@
 		3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		3D7D9F4E245D365200D3D091 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		3D7D9F50245E54C100D3D091 /* Burrito.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burrito.jpeg; sourceTree = "<group>"; };
-		5F3765B77BDC135755F170C9 /* Pods_Spreadly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B4407BCB77F6101A492701A /* Pods-Spreadly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.release.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.release.xcconfig"; sourceTree = "<group>"; };
-		80EF24A16CB02E8B5CAB4EE9 /* Pods-Spreadly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.debug.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.debug.xcconfig"; sourceTree = "<group>"; };
-		8E8A5AFD6F4634A02F0A2E60 /* Pods_Spreadly_SpreadlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly_SpreadlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		943B6E3FD157D3F8873760C9 /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly-SpreadlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		97DCB7415F18135A17E726C7 /* Pods-SpreadlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreadlyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpreadlyTests/Pods-SpreadlyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D49CF13461BC901D9C3F2AA4 /* Pods_SpreadlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreadlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1B49720890826416E8B30AC /* Pods-SpreadlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreadlyTests.release.xcconfig"; path = "Target Support Files/Pods-SpreadlyTests/Pods-SpreadlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		54D2FC416B46BCF94493C871 /* Pods_Spreadly_SpreadlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly_SpreadlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C39977CFC22C93E57ECF2BE /* Pods_SpreadlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreadlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D62A9988CFF44ACD97E596F /* Pods-Spreadly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.release.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.release.xcconfig"; sourceTree = "<group>"; };
+		9E38AD696AEB66A8CC7DE322 /* Pods-SpreadlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreadlyTests.release.xcconfig"; path = "Target Support Files/Pods-SpreadlyTests/Pods-SpreadlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		F8ED848F59D5053B0D71223C /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly-SpreadlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E6893266F4BC4F96FAFE29 /* Pods_Spreadly.framework in Frameworks */,
+				EC2043683516822824D0A3EC /* Pods_Spreadly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC4F87240B1A1A57F6B0882 /* Pods_SpreadlyTests.framework in Frameworks */,
+				417ADF2F5AD158B63BD38D5B /* Pods_SpreadlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7942D1E9F48F797C695B2C62 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */,
+				349196C430085C57D2F7D597 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +117,7 @@
 				3D7ACA57245A8B3A00508C7D /* SpreadlyUITests */,
 				3D7ACA31245A8B3800508C7D /* Products */,
 				436C7CC6621223BEF3C7D95C /* Pods */,
-				C371DF52BC5BD152B01F1FBA /* Frameworks */,
+				C9DAACD2C489FE1537865399 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +134,7 @@
 		3D7ACA32245A8B3800508C7D /* Spreadly */ = {
 			isa = PBXGroup;
 			children = (
+				3D2B645D2462006500452BF5 /* Default.png */,
 				3D7D9F50245E54C100D3D091 /* Burrito.jpeg */,
 				3D7D9F44245CA5F700D3D091 /* HomeViewController.swift */,
 				3D7ACA66245A9A1D00508C7D /* GoogleService-Info.plist */,
@@ -172,22 +175,22 @@
 		436C7CC6621223BEF3C7D95C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				80EF24A16CB02E8B5CAB4EE9 /* Pods-Spreadly.debug.xcconfig */,
-				7B4407BCB77F6101A492701A /* Pods-Spreadly.release.xcconfig */,
-				2C1F076C4FF4C6FABCDD3B0F /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */,
-				943B6E3FD157D3F8873760C9 /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */,
-				97DCB7415F18135A17E726C7 /* Pods-SpreadlyTests.debug.xcconfig */,
-				E1B49720890826416E8B30AC /* Pods-SpreadlyTests.release.xcconfig */,
+				13BB79C89476F54D52355758 /* Pods-Spreadly.debug.xcconfig */,
+				8D62A9988CFF44ACD97E596F /* Pods-Spreadly.release.xcconfig */,
+				1A33DF0E65E2783E115BAF1A /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */,
+				F8ED848F59D5053B0D71223C /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */,
+				2E555A52A2A5EC140A1F37EC /* Pods-SpreadlyTests.debug.xcconfig */,
+				9E38AD696AEB66A8CC7DE322 /* Pods-SpreadlyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C371DF52BC5BD152B01F1FBA /* Frameworks */ = {
+		C9DAACD2C489FE1537865399 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F3765B77BDC135755F170C9 /* Pods_Spreadly.framework */,
-				8E8A5AFD6F4634A02F0A2E60 /* Pods_Spreadly_SpreadlyUITests.framework */,
-				D49CF13461BC901D9C3F2AA4 /* Pods_SpreadlyTests.framework */,
+				38CB138641D6A8A59C4691E9 /* Pods_Spreadly.framework */,
+				54D2FC416B46BCF94493C871 /* Pods_Spreadly_SpreadlyUITests.framework */,
+				8C39977CFC22C93E57ECF2BE /* Pods_SpreadlyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,11 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D7ACA5D245A8B3A00508C7D /* Build configuration list for PBXNativeTarget "Spreadly" */;
 			buildPhases = (
-				D710E0187B31566523DF4FBC /* [CP] Check Pods Manifest.lock */,
+				3DE6B388EC3425FC71E822C7 /* [CP] Check Pods Manifest.lock */,
 				3D7ACA2C245A8B3800508C7D /* Sources */,
 				3D7ACA2D245A8B3800508C7D /* Frameworks */,
 				3D7ACA2E245A8B3800508C7D /* Resources */,
-				189DBEFC7ECD30AA1A22103F /* [CP] Embed Pods Frameworks */,
+				F261616ACD87F432DCFCEA7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D7ACA60245A8B3A00508C7D /* Build configuration list for PBXNativeTarget "SpreadlyTests" */;
 			buildPhases = (
-				289C7356C6ADC05A8ED43180 /* [CP] Check Pods Manifest.lock */,
+				2A21A219A0699D83A34C95AC /* [CP] Check Pods Manifest.lock */,
 				3D7ACA45245A8B3A00508C7D /* Sources */,
 				3D7ACA46245A8B3A00508C7D /* Frameworks */,
 				3D7ACA47245A8B3A00508C7D /* Resources */,
@@ -237,11 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D7ACA63245A8B3A00508C7D /* Build configuration list for PBXNativeTarget "SpreadlyUITests" */;
 			buildPhases = (
-				75867CE3A898A6FC766A1D9D /* [CP] Check Pods Manifest.lock */,
+				5E763A173E0EC6E02D20E354 /* [CP] Check Pods Manifest.lock */,
 				3D7ACA50245A8B3A00508C7D /* Sources */,
 				3D7ACA51245A8B3A00508C7D /* Frameworks */,
 				3D7ACA52245A8B3A00508C7D /* Resources */,
-				97E9210B983BA151DA859C9E /* [CP] Embed Pods Frameworks */,
+				0D85CBF1FE06181452D66E05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7ACA67245A9A1D00508C7D /* GoogleService-Info.plist in Resources */,
+				3D2B645E2462006500452BF5 /* Default.png in Resources */,
 				3D7ACA43245A8B3A00508C7D /* LaunchScreen.storyboard in Resources */,
 				3D7D9F51245E54C100D3D091 /* Burrito.jpeg in Resources */,
 				3D7ACA40245A8B3A00508C7D /* Assets.xcassets in Resources */,
@@ -326,24 +330,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		189DBEFC7ECD30AA1A22103F /* [CP] Embed Pods Frameworks */ = {
+		0D85CBF1FE06181452D66E05 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		289C7356C6ADC05A8ED43180 /* [CP] Check Pods Manifest.lock */ = {
+		2A21A219A0699D83A34C95AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,7 +369,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75867CE3A898A6FC766A1D9D /* [CP] Check Pods Manifest.lock */ = {
+		3DE6B388EC3425FC71E822C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spreadly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E763A173E0EC6E02D20E354 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,43 +413,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97E9210B983BA151DA859C9E /* [CP] Embed Pods Frameworks */ = {
+		F261616ACD87F432DCFCEA7A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spreadly-SpreadlyUITests/Pods-Spreadly-SpreadlyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D710E0187B31566523DF4FBC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Spreadly-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spreadly/Pods-Spreadly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -612,7 +616,7 @@
 		};
 		3D7ACA5E245A8B3A00508C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80EF24A16CB02E8B5CAB4EE9 /* Pods-Spreadly.debug.xcconfig */;
+			baseConfigurationReference = 13BB79C89476F54D52355758 /* Pods-Spreadly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -631,7 +635,7 @@
 		};
 		3D7ACA5F245A8B3A00508C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B4407BCB77F6101A492701A /* Pods-Spreadly.release.xcconfig */;
+			baseConfigurationReference = 8D62A9988CFF44ACD97E596F /* Pods-Spreadly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +654,7 @@
 		};
 		3D7ACA61245A8B3A00508C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97DCB7415F18135A17E726C7 /* Pods-SpreadlyTests.debug.xcconfig */;
+			baseConfigurationReference = 2E555A52A2A5EC140A1F37EC /* Pods-SpreadlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -672,7 +676,7 @@
 		};
 		3D7ACA62245A8B3A00508C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1B49720890826416E8B30AC /* Pods-SpreadlyTests.release.xcconfig */;
+			baseConfigurationReference = 9E38AD696AEB66A8CC7DE322 /* Pods-SpreadlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -694,7 +698,7 @@
 		};
 		3D7ACA64245A8B3A00508C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C1F076C4FF4C6FABCDD3B0F /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */;
+			baseConfigurationReference = 1A33DF0E65E2783E115BAF1A /* Pods-Spreadly-SpreadlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -714,7 +718,7 @@
 		};
 		3D7ACA65245A8B3A00508C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943B6E3FD157D3F8873760C9 /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */;
+			baseConfigurationReference = F8ED848F59D5053B0D71223C /* Pods-Spreadly-SpreadlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

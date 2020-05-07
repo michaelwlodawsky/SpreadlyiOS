@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class MenuItem {
+    let MAX_IMAGE_SIZE: Int64 = 1 * 1024 * 1024 //1 MB
+    
     var name: String = ""
     var type: String = ""
     var price: Float = 0.0
     
+    var imageString: String? = nil
+    var image: UIImage? = nil
     var description: String? = nil
     var ingredients: [String]? = nil
     var sides: [String]? = nil
@@ -24,6 +29,7 @@ class MenuItem {
     init(name: String,
          type: String,
          price: Float,
+         imageString: String?,
          description: String?,
          ingredients: [String]?,
          sides: [String]?,
@@ -36,6 +42,7 @@ class MenuItem {
         self.type = type
         self.price = price
         
+        self.imageString = imageString
         self.description = description
         self.ingredients = ingredients
         self.sides = sides

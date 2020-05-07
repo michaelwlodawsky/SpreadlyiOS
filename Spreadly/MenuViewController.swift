@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Foundation
+import FirebaseStorage
 
 struct cellData {
     var opened = Bool()
@@ -29,19 +30,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let backButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(back))
         self.navigationItem.leftBarButtonItem = backButton
         
-        // TODO: Get menu from Firebase
-        // Test Code only
-        //let item = MenuItem(name: "Test of a long item string?", type: "entree", price: 199.99, description: "I am only a test of a very very very long description thing lets see how long we can make this bitch gooooooooooooo.", ingredients: ["foo", "bar"], sides: ["foo"], pescatarian: false, vegan: true, gf: false, vegetarian: false)
+        let dispatchGroup = DispatchGroup()
         
-        // Get the menu from Firebase
-//        let menu: [String: [MenuItem]] = readFirebase()
-//        for (key, value) in menu {
-//            tableViewData.append(cellData(opened: false, title: key, data: value))
-//        }
-//        tableView.reloadData()
+        
 
-        //menu.append(item)
-        readFirebase()
+        readFirebase() { (menu) -> (Void) in
+            print("***menu: \(menu)")
+            self.getImages(group: dispatchGroup, menu: menu) { () -> (Void) in
+                dispatchGroup.notify(queue: .main) {
+                    print("We got all the images")
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     @objc func back(sender: UIBarButtonItem) {
@@ -49,7 +50,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("count: \(tableViewData.count)")
         return tableViewData.count
     }
     
@@ -94,14 +94,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.itemName.text = item.name
             cell.itemPrice.text = String(format: "$%0.2f", item.price)
             cell.itemDescription.text = item.description ?? ""
-            cell.itemImage.image = UIImage(named: "Burrito.jpeg")
+            cell.itemImage.image = item.image ?? UIImage(named: "Default.png")
             
             return cell
         }
     }
     
     // TODO: Make data update in View Table wait for firebase read
-    private func readFirebase() {
+    private func readFirebase(completion: @escaping ([String: [MenuItem]]) -> (Void)) {
         print("Reading from Firebase")
         var menu: [String: [MenuItem]] = [:]
         db.collection("clients").document("\(appDelegate.query!)").collection("menu").getDocuments { (snapshot, error) in
@@ -121,6 +121,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let item = MenuItem(name: document.documentID,
                                         type: itemType,
                                         price: price,
+                                        imageString: data["image", default: ""] as? String,
                                         description: data["description", default: ""] as? String,
                                         ingredients: data["ingredients", default: []] as? [String],
                                         sides: data["sides", default: []] as? [String],
@@ -136,18 +137,37 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                         menu[itemType]?.append(item)
                     }
                 }
-                // Reload UI
-                for (key, value) in menu {
-                    self.tableViewData.append(cellData(opened: false, title: key, data: value))
-                }
-                self.tableView.reloadData()
+                completion(menu)
             }
         }
     }
     
-    func getImage(imagePath: String) -> UIImage {
+    private func getImages(group: DispatchGroup, menu: [String: [MenuItem]], completion: @escaping () -> (Void)) {
         // TODO: Get image from Firebase
-        return UIImage()
+        for (key, value) in menu {
+            for item in value {
+                if item.imageString != nil {
+                    group.enter()
+                    // TODO: Fix Concurrency issue, setting of data needs to happen after image read
+                    let storageRef = Storage.storage().reference(forURL: item.imageString!)
+                    storageRef.getData(maxSize: item.MAX_IMAGE_SIZE) { (data, error) in
+                        if error != nil {
+                            print("Error: Couldn't pull image from Firebase Storage")
+                            print("\(error)")
+                        } else {
+                            print("Downloaded image from Firebase")
+                            item.image = UIImage(data: data!)
+                        }
+                        group.leave()
+                        // TODO: add to tableViewData here to fix concurrency issue
+                        //self.tableView.reloadData()
+                    }
+
+                }
+            }
+            self.tableViewData.append(cellData(opened: false, title: key, data: value))
+        }
+        completion()
     }
 
 }

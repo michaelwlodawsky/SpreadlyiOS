@@ -33,12 +33,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let dispatchGroup = DispatchGroup()
         
         
-
+        // Firebase work
         readFirebase() { (menu) -> (Void) in
-            print("***menu: \(menu)")
             self.getImages(group: dispatchGroup, menu: menu) { () -> (Void) in
                 dispatchGroup.notify(queue: .main) {
-                    print("We got all the images")
                     self.tableView.reloadData()
                 }
             }
@@ -63,29 +61,41 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Populate popover with menu shit
-        //performSegue(withIdentifier: "menuDetail", sender: self)
-        if tableViewData[indexPath.section].opened {
-            tableViewData[indexPath.section].opened = false
-            let sections = IndexSet.init(integer: indexPath.section)
-            // Do reload here
-            tableView.reloadSections(sections, with: .none)
+        // Only open and close sections if selecting the section header
+        if indexPath.row == 0 {
+            if tableViewData[indexPath.section].opened {
+                tableViewData[indexPath.section].opened = false
+                let cell = tableView.cellForRow(at: indexPath) as! SectionTableViewCell
+                cell.accessory.image = UIImage(systemName: "chevron.down")
+                let sections = IndexSet.init(integer: indexPath.section)
+                // Do reload here
+                tableView.reloadSections(sections, with: .automatic)
+            } else {
+                tableViewData[indexPath.section].opened = true
+                let cell = tableView.cellForRow(at: indexPath) as! SectionTableViewCell
+                cell.accessory.image = UIImage(systemName: "chevron.right")
+                let sections = IndexSet.init(integer: indexPath.section)
+                // Do reload here
+                tableView.reloadSections(sections, with: .automatic)
+            }
         } else {
-            tableViewData[indexPath.section].opened = true
-            let sections = IndexSet.init(integer: indexPath.section)
-            // Do reload here
-            tableView.reloadSections(sections, with: .automatic)
+            // Show detail page
+            performSegue(withIdentifier: "menuDetail", sender: self)
         }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "sectionCell")
+//            if let cell = tableView.cellForRow(at: indexPath) as? SectionTableViewCell {
+//                
+//            }
             
-            cell?.textLabel?.text = tableViewData[indexPath.section].title
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sectionCell") as! SectionTableViewCell
+            cell.title.text = tableViewData[indexPath.section].title
+            cell.accessory.image = UIImage(systemName: "chevron.right")
+            return cell
             
-            return cell!
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
             
@@ -100,7 +110,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // TODO: Make data update in View Table wait for firebase read
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? MenuDetailsViewController {
+            guard let index = tableView.indexPathForSelectedRow?.section else {
+                return
+            }
+            guard let dataIndex = tableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            let item = tableViewData[index].data[dataIndex - 1]
+            destinationVC.item = item
+        }
+    }
+    
     private func readFirebase(completion: @escaping ([String: [MenuItem]]) -> (Void)) {
         print("Reading from Firebase")
         var menu: [String: [MenuItem]] = [:]
@@ -110,7 +132,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("\(error ?? "No Error?" as! Error)")
             } else {
                 for document in snapshot?.documents ?? [] {
-                    print("\(document.documentID) : \(document.data())")
                     let data = document.data()
                     // Conform each menu item to Data Structure { type: [MenuItem], type: [MenuItem], ... }
                     let itemType = data["type"] as! String
@@ -143,7 +164,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func getImages(group: DispatchGroup, menu: [String: [MenuItem]], completion: @escaping () -> (Void)) {
-        // TODO: Get image from Firebase
         for (key, value) in menu {
             for item in value {
                 if item.imageString != nil {
@@ -153,14 +173,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     storageRef.getData(maxSize: item.MAX_IMAGE_SIZE) { (data, error) in
                         if error != nil {
                             print("Error: Couldn't pull image from Firebase Storage")
-                            print("\(error)")
+                            print("\(error ?? "No Error?" as! Error)")
                         } else {
-                            print("Downloaded image from Firebase")
                             item.image = UIImage(data: data!)
                         }
                         group.leave()
-                        // TODO: add to tableViewData here to fix concurrency issue
-                        //self.tableView.reloadData()
                     }
 
                 }

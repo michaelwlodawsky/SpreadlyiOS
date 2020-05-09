@@ -60,8 +60,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         
         if metadataObject.type == AVMetadataObject.ObjectType.qr {
             if metadataObject.stringValue != nil {
-                print("Test")
-                appDelegate.query = metadataObject.stringValue
+                appDelegate.query = metadataObject.stringValue?.replacingOccurrences(of: "spreadly://?", with: "", options: [.caseInsensitive])
                 performSegue(withIdentifier: "toMenu", sender: self)
             }
         }

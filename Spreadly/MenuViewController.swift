@@ -21,6 +21,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var tableViewData = [cellData]()
+    var sectionImage = UIImage(systemName: "chevron.right")
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -65,15 +66,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexPath.row == 0 {
             if tableViewData[indexPath.section].opened {
                 tableViewData[indexPath.section].opened = false
-                let cell = tableView.cellForRow(at: indexPath) as! SectionTableViewCell
-                cell.accessory.image = UIImage(systemName: "chevron.down")
+                
+                self.sectionImage = UIImage(systemName: "chevron.down")
                 let sections = IndexSet.init(integer: indexPath.section)
                 // Do reload here
                 tableView.reloadSections(sections, with: .automatic)
             } else {
                 tableViewData[indexPath.section].opened = true
-                let cell = tableView.cellForRow(at: indexPath) as! SectionTableViewCell
-                cell.accessory.image = UIImage(systemName: "chevron.right")
+                self.sectionImage = UIImage(systemName: "chevron.right")
                 let sections = IndexSet.init(integer: indexPath.section)
                 // Do reload here
                 tableView.reloadSections(sections, with: .automatic)
@@ -88,12 +88,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
 //            if let cell = tableView.cellForRow(at: indexPath) as? SectionTableViewCell {
-//                
+//
 //            }
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "sectionCell") as! SectionTableViewCell
             cell.title.text = tableViewData[indexPath.section].title
-            cell.accessory.image = UIImage(systemName: "chevron.right")
+            cell.accessory.image = sectionImage
             return cell
             
         } else {

@@ -28,6 +28,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         let backButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(back))
         self.navigationItem.leftBarButtonItem = backButton
         

@@ -10,6 +10,15 @@
 		349196C430085C57D2F7D597 /* Pods_Spreadly_SpreadlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2FC416B46BCF94493C871 /* Pods_Spreadly_SpreadlyUITests.framework */; };
 		3D2B645E2462006500452BF5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2B645D2462006500452BF5 /* Default.png */; };
 		3D2B64602465FD9B00452BF5 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B645F2465FD9B00452BF5 /* SectionTableViewCell.swift */; };
+		3D49BFD6246B29D400F1224C /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFD5246B29D400F1224C /* appstore.png */; };
+		3D49BFD9246B2B5000F1224C /* Pescatarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFD8246B2B5000F1224C /* Pescatarian.png */; };
+		3D49BFDB246B2B6500F1224C /* Vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFDA246B2B6500F1224C /* Vegetarian.png */; };
+		3D49BFDD246B2B7000F1224C /* Vegan.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFDC246B2B7000F1224C /* Vegan.png */; };
+		3D49BFDF246B2B7F00F1224C /* GF.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFDE246B2B7F00F1224C /* GF.png */; };
+		3D49BFE2246B2CCA00F1224C /* Yellowtail-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D49BFE1246B2CCA00F1224C /* Yellowtail-Regular.ttf */; };
+		3D49BFE4246B347E00F1224C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49BFE3246B347E00F1224C /* TabViewController.swift */; };
+		3D49BFE6246B59A400F1224C /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49BFE5246B59A400F1224C /* Design.swift */; };
+		3D49BFEC246B5AA500F1224C /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49BFEB246B5AA500F1224C /* NavViewController.swift */; };
 		3D7ACA34245A8B3800508C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA33245A8B3800508C7D /* AppDelegate.swift */; };
 		3D7ACA36245A8B3800508C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7ACA35245A8B3800508C7D /* SceneDelegate.swift */; };
 		3D7ACA3B245A8B3800508C7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7ACA39245A8B3800508C7D /* Main.storyboard */; };
@@ -25,7 +34,6 @@
 		3D7D9F4B245D313D00D3D091 /* MenuDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */; };
 		3D7D9F4D245D359500D3D091 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */; };
 		3D7D9F4F245D365200D3D091 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D9F4E245D365200D3D091 /* DataTypes.swift */; };
-		3D7D9F51245E54C100D3D091 /* Burrito.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D9F50245E54C100D3D091 /* Burrito.jpeg */; };
 		417ADF2F5AD158B63BD38D5B /* Pods_SpreadlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C39977CFC22C93E57ECF2BE /* Pods_SpreadlyTests.framework */; };
 		EC2043683516822824D0A3EC /* Pods_Spreadly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CB138641D6A8A59C4691E9 /* Pods_Spreadly.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +62,15 @@
 		38CB138641D6A8A59C4691E9 /* Pods_Spreadly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2B645D2462006500452BF5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3D2B645F2465FD9B00452BF5 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		3D49BFD5246B29D400F1224C /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		3D49BFD8246B2B5000F1224C /* Pescatarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pescatarian.png; sourceTree = "<group>"; };
+		3D49BFDA246B2B6500F1224C /* Vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vegetarian.png; sourceTree = "<group>"; };
+		3D49BFDC246B2B7000F1224C /* Vegan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vegan.png; sourceTree = "<group>"; };
+		3D49BFDE246B2B7F00F1224C /* GF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GF.png; sourceTree = "<group>"; };
+		3D49BFE1246B2CCA00F1224C /* Yellowtail-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yellowtail-Regular.ttf"; sourceTree = "<group>"; };
+		3D49BFE3246B347E00F1224C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		3D49BFE5246B59A400F1224C /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		3D49BFEB246B5AA500F1224C /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		3D7ACA30245A8B3800508C7D /* Spreadly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7ACA33245A8B3800508C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D7ACA35245A8B3800508C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +92,6 @@
 		3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsViewController.swift; sourceTree = "<group>"; };
 		3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		3D7D9F4E245D365200D3D091 /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
-		3D7D9F50245E54C100D3D091 /* Burrito.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burrito.jpeg; sourceTree = "<group>"; };
 		54D2FC416B46BCF94493C871 /* Pods_Spreadly_SpreadlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadly_SpreadlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C39977CFC22C93E57ECF2BE /* Pods_SpreadlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreadlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D62A9988CFF44ACD97E596F /* Pods-Spreadly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadly.release.xcconfig"; path = "Target Support Files/Pods-Spreadly/Pods-Spreadly.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +127,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D49BFD7246B2B1900F1224C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3D49BFDC246B2B7000F1224C /* Vegan.png */,
+				3D49BFDE246B2B7F00F1224C /* GF.png */,
+				3D49BFDA246B2B6500F1224C /* Vegetarian.png */,
+				3D49BFD8246B2B5000F1224C /* Pescatarian.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3D49BFE0246B2CAD00F1224C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D49BFE1246B2CCA00F1224C /* Yellowtail-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3D49BFE7246B59F500F1224C /* Navigation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D49BFE3246B347E00F1224C /* TabViewController.swift */,
+				3D49BFEB246B5AA500F1224C /* NavViewController.swift */,
+			);
+			path = "Navigation Controllers";
+			sourceTree = "<group>";
+		};
+		3D49BFE8246B5A0E00F1224C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D9F4E245D365200D3D091 /* DataTypes.swift */,
+				3D49BFE5246B59A400F1224C /* Design.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3D49BFE9246B5A2800F1224C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D9F48245CC22500D3D091 /* MenuViewController.swift */,
+				3D2B645F2465FD9B00452BF5 /* SectionTableViewCell.swift */,
+				3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */,
+				3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		3D7ACA27245A8B3800508C7D = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +200,13 @@
 		3D7ACA32245A8B3800508C7D /* Spreadly */ = {
 			isa = PBXGroup;
 			children = (
+				3D49BFE9246B5A2800F1224C /* Menu */,
+				3D49BFE8246B5A0E00F1224C /* Utilities */,
+				3D49BFE7246B59F500F1224C /* Navigation Controllers */,
+				3D49BFE0246B2CAD00F1224C /* Fonts */,
+				3D49BFD7246B2B1900F1224C /* Assets */,
+				3D49BFD5246B29D400F1224C /* appstore.png */,
 				3D2B645D2462006500452BF5 /* Default.png */,
-				3D7D9F50245E54C100D3D091 /* Burrito.jpeg */,
 				3D7D9F44245CA5F700D3D091 /* HomeViewController.swift */,
 				3D7ACA66245A9A1D00508C7D /* GoogleService-Info.plist */,
 				3D7ACA33245A8B3800508C7D /* AppDelegate.swift */,
@@ -148,11 +217,6 @@
 				3D7ACA44245A8B3A00508C7D /* Info.plist */,
 				3D7ACA3C245A8B3800508C7D /* Spreadly.xcdatamodeld */,
 				3D7D9F46245CAF8700D3D091 /* CameraViewController.swift */,
-				3D7D9F48245CC22500D3D091 /* MenuViewController.swift */,
-				3D7D9F4A245D313D00D3D091 /* MenuDetailsViewController.swift */,
-				3D7D9F4C245D359500D3D091 /* MenuTableViewCell.swift */,
-				3D7D9F4E245D365200D3D091 /* DataTypes.swift */,
-				3D2B645F2465FD9B00452BF5 /* SectionTableViewCell.swift */,
 			);
 			path = Spreadly;
 			sourceTree = "<group>";
@@ -309,8 +373,13 @@
 			files = (
 				3D7ACA67245A9A1D00508C7D /* GoogleService-Info.plist in Resources */,
 				3D2B645E2462006500452BF5 /* Default.png in Resources */,
+				3D49BFD6246B29D400F1224C /* appstore.png in Resources */,
+				3D49BFDF246B2B7F00F1224C /* GF.png in Resources */,
 				3D7ACA43245A8B3A00508C7D /* LaunchScreen.storyboard in Resources */,
-				3D7D9F51245E54C100D3D091 /* Burrito.jpeg in Resources */,
+				3D49BFDB246B2B6500F1224C /* Vegetarian.png in Resources */,
+				3D49BFE2246B2CCA00F1224C /* Yellowtail-Regular.ttf in Resources */,
+				3D49BFD9246B2B5000F1224C /* Pescatarian.png in Resources */,
+				3D49BFDD246B2B7000F1224C /* Vegan.png in Resources */,
 				3D7ACA40245A8B3A00508C7D /* Assets.xcassets in Resources */,
 				3D7ACA3B245A8B3800508C7D /* Main.storyboard in Resources */,
 			);
@@ -446,8 +515,11 @@
 				3D2B64602465FD9B00452BF5 /* SectionTableViewCell.swift in Sources */,
 				3D7D9F4F245D365200D3D091 /* DataTypes.swift in Sources */,
 				3D7D9F47245CAF8700D3D091 /* CameraViewController.swift in Sources */,
+				3D49BFE4246B347E00F1224C /* TabViewController.swift in Sources */,
+				3D49BFEC246B5AA500F1224C /* NavViewController.swift in Sources */,
 				3D7ACA34245A8B3800508C7D /* AppDelegate.swift in Sources */,
 				3D7D9F4B245D313D00D3D091 /* MenuDetailsViewController.swift in Sources */,
+				3D49BFE6246B59A400F1224C /* Design.swift in Sources */,
 				3D7ACA36245A8B3800508C7D /* SceneDelegate.swift in Sources */,
 				3D7D9F45245CA5F800D3D091 /* HomeViewController.swift in Sources */,
 			);

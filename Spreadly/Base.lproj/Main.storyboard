@@ -15,14 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Spreadly!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVb-R5-CSP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVb-R5-CSP">
                                 <rect key="frame" x="44" y="251" width="327" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="327" id="Mc5-du-4bw"/>
                                     <constraint firstAttribute="height" constant="42" id="orU-1y-Vj0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welcome to Spreadly!">
+                                        <attributes>
+                                            <font key="NSFont" size="35" name="Yellowtail-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by scanning a QR Code at your favorite restuarant!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-YH-Dsp">
@@ -72,14 +78,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="mGX-Dr-tL9"/>
-                    <navigationItem key="navigationItem" id="KGf-lV-PtI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="125.89285714285714"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="mrx-Zr-ezr">
             <objects>
                 <viewController storyboardIdentifier="menuVC" id="8Nt-mw-Vfu" customClass="MenuViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,7 +205,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJv-89-ao3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RAT-v2-XO3"/>
+                    <navigationItem key="navigationItem" title="Menu" id="RAT-v2-XO3"/>
                     <connections>
                         <outlet property="tableView" destination="DGW-XN-Eja" id="m1J-ok-5ZY"/>
                         <segue destination="lHK-kd-AhV" kind="popoverPresentation" identifier="menuDetail" popoverAnchorView="Mr5-oQ-AlN" id="vSF-hn-eoQ">
@@ -315,17 +320,22 @@
             </objects>
             <point key="canvasLocation" x="1958" y="890"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav View Controller-->
         <scene sceneID="MEY-U2-b6M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lvt-79-GQx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lvt-79-GQx" customClass="NavViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sd-y5-2Bn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Yellowtail-Regular" family="Yellowtail" pointSize="32"/>
+                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="NavBar" destination="9sd-y5-2Bn" id="4oj-2E-Png"/>
                         <segue destination="Gxu-lv-Myw" kind="relationship" relationship="rootViewController" id="kbC-Xp-Yih"/>
                     </connections>
                 </navigationController>
@@ -333,18 +343,19 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Spreadly-->
         <scene sceneID="ZRd-kB-S2b">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gxu-lv-Myw" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gxu-lv-Myw" customClass="TabViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="skD-hp-irq"/>
+                    <navigationItem key="navigationItem" title="Spreadly" id="skD-hp-irq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHa-CE-CjZ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="TitleItem" destination="skD-hp-irq" id="OVS-9h-Tat"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Yxr-1S-FSd"/>
                     </connections>
                 </tabBarController>
@@ -354,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SaL-eg-gMC"/>
+        <segue reference="9a1-qM-ZU3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>

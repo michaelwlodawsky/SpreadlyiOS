@@ -36,8 +36,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         // Firebase work
+        self.showLoading(superView: self.view)
         readFirebase() { (menu) -> (Void) in
             self.getImages(group: dispatchGroup, menu: menu) { () -> (Void) in
+                
+                //self.removeLoading()
                 dispatchGroup.notify(queue: .main) {
                     self.tableView.reloadData()
                 }

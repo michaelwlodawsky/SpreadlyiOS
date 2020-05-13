@@ -21,7 +21,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var tableViewData = [cellData]()
-    var sectionImage = UIImage(systemName: "chevron.right")
+    var sectionImage = UIImage(systemName: "chevron.down")
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         readFirebase() { (menu) -> (Void) in
             self.getImages(group: dispatchGroup, menu: menu) { () -> (Void) in
                 
-                //self.removeLoading()
+                self.removeLoading()
                 dispatchGroup.notify(queue: .main) {
                     self.tableView.reloadData()
                 }
@@ -62,6 +62,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             return tableViewData[section].data.count + 1
         } else {
             return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 55
+        } else {
+            return 150
         }
     }
     
@@ -104,6 +112,36 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
             
             let item = tableViewData[indexPath.section].data[indexPath.row - 1]
+            
+            // TODO: Speed-up dietary images setup
+            // TODO: Fix dietary images setup
+            // Setup Dietary images
+            var images: [String] = []
+            if item.vegan ?? false {
+                images.append(item.VEGAN)
+            } else if item.vegetarian ?? false {
+                images.append(item.VEGATARIAN)
+            }
+            if item.gf ?? false {
+                images.append(item.GLUTEN_FREE)
+            }
+            if item.pescatarian ?? false {
+                images.append(item.PESCATARIAN)
+            }
+            
+            if images.indices.contains(0) {
+                cell.dietaryImage1.isHidden = false
+                cell.dietaryImage1.image = UIImage(named: images[0])
+            }
+            if images.indices.contains(1) {
+                cell.dietaryImage2.isHidden = false
+                cell.dietaryImage2.image = UIImage(named: images[1])
+            }
+            if images.indices.contains(2) {
+                cell.dietaryImage3.isHidden = false
+                cell.dietaryImage3.image = UIImage(named: images[2])
+            } 
+            
     
             cell.itemName.text = item.name
             cell.itemPrice.text = String(format: "$%0.2f", item.price)
@@ -126,6 +164,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             destinationVC.item = item
         }
     }
+
     
     private func readFirebase(completion: @escaping ([String: [MenuItem]]) -> (Void)) {
         print("Reading from Firebase")

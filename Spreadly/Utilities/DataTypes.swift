@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class MenuItem {
+    let VEGAN: String = "Vegan.png"
+    let VEGATARIAN: String = "Vegetarian.png"
+    let PESCATARIAN: String = "Pescatarian.png"
+    let GLUTEN_FREE: String = "GF.png"
+    
     let MAX_IMAGE_SIZE: Int64 = 1 * 1024 * 1024 //1 MB
     
     var name: String = ""

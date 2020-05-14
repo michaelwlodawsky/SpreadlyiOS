@@ -9,18 +9,35 @@
 import Foundation
 import UIKit
 
-class MenuItem {
-    let VEGAN: String = "Vegan.png"
-    let VEGATARIAN: String = "Vegetarian.png"
-    let PESCATARIAN: String = "Pescatarian.png"
-    let GLUTEN_FREE: String = "GF.png"
+struct DietaryDetail {
+    let VEGAN: Int = 0
+    let VEGATARIAN: Int = 1
+    let PESCATARIAN: Int = 2
+    let GLUTEN_FREE: Int = 3
+  
+//    let VEGAN: String = "vegan"
+//    let VEGATARIAN: String = "vegetarian"
+//    let PESCATARIAN: String = "pescatarian"
+//    let GLUTEN_FREE: String = "gf"
     
+    let imageArray: [UIImage?] = [
+        UIImage(named: "Vegan.png"),
+        UIImage(named: "Vegetarian.png"),
+        UIImage(named: "Pescatarian.png"),
+        UIImage(named: "GF.png")
+    ]
+    
+}
+
+class MenuItem {
     let MAX_IMAGE_SIZE: Int64 = 1 * 1024 * 1024 //1 MB
     
     var name: String = ""
     var type: String = ""
     var price: Float = 0.0
     
+    // Optionals
+    var dietaryImages: [UIImage] = []
     var imageString: String? = nil
     var image: UIImage? = nil
     var description: String? = nil

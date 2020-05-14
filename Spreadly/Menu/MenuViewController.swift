@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Foundation
 import FirebaseStorage
+import CoreData
 
 struct cellData {
     var opened = Bool()
@@ -22,6 +23,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var tableViewData = [cellData]()
     var sectionImage = UIImage(systemName: "chevron.down")
+    let veganImage = UIImage(named: "Vegan.png")!
+    let vegetarianImage = UIImage(named: "Vegetarian.png")!
+    let pescatarianImage = UIImage(named: "Pescatarian.png")!
+    let gfImage = UIImage(named: "GF.png")!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,15 +38,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.leftBarButtonItem = backButton
         
         let dispatchGroup = DispatchGroup()
-        
+
         
         // Firebase work
         self.showLoading(superView: self.view)
         readFirebase() { (menu) -> (Void) in
             self.getImages(group: dispatchGroup, menu: menu) { () -> (Void) in
-                
-                self.removeLoading()
                 dispatchGroup.notify(queue: .main) {
+                    self.removeLoading()
                     self.tableView.reloadData()
                 }
             }
@@ -66,6 +70,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Set cell height for sections and rows
         if indexPath.row == 0 {
             return 55
         } else {
@@ -78,7 +83,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexPath.row == 0 {
             if tableViewData[indexPath.section].opened {
                 tableViewData[indexPath.section].opened = false
-                
                 self.sectionImage = UIImage(systemName: "chevron.down")
                 let sections = IndexSet.init(integer: indexPath.section)
                 // Do reload here
@@ -99,9 +103,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-//            if let cell = tableView.cellForRow(at: indexPath) as? SectionTableViewCell {
-//
-//            }
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "sectionCell") as! SectionTableViewCell
             cell.title.text = tableViewData[indexPath.section].title
@@ -112,35 +113,28 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
             
             let item = tableViewData[indexPath.section].data[indexPath.row - 1]
-            
-            // TODO: Speed-up dietary images setup
-            // TODO: Fix dietary images setup
+
             // Setup Dietary images
-            var images: [String] = []
-            if item.vegan ?? false {
-                images.append(item.VEGAN)
-            } else if item.vegetarian ?? false {
-                images.append(item.VEGATARIAN)
+            
+            if item.dietaryImages.indices.contains(0) {
+                cell.dietaryImage1.isHidden = false
+                cell.dietaryImage1.image = item.dietaryImages[0]
+            } else {
+                cell.dietaryImage1.isHidden = true
             }
-            if item.gf ?? false {
-                images.append(item.GLUTEN_FREE)
+            if item.dietaryImages.indices.contains(1) {
+                cell.dietaryImage2.isHidden = false
+                cell.dietaryImage2.image = item.dietaryImages[1]
+            } else {
+                cell.dietaryImage2.isHidden = true
             }
-            if item.pescatarian ?? false {
-                images.append(item.PESCATARIAN)
+            if item.dietaryImages.indices.contains(2) {
+                cell.dietaryImage3.isHidden = false
+                cell.dietaryImage3.image = item.dietaryImages[2]
+            } else {
+                cell.dietaryImage3.isHidden = true
             }
             
-            if images.indices.contains(0) {
-                cell.dietaryImage1.isHidden = false
-                cell.dietaryImage1.image = UIImage(named: images[0])
-            }
-            if images.indices.contains(1) {
-                cell.dietaryImage2.isHidden = false
-                cell.dietaryImage2.image = UIImage(named: images[1])
-            }
-            if images.indices.contains(2) {
-                cell.dietaryImage3.isHidden = false
-                cell.dietaryImage3.image = UIImage(named: images[2])
-            } 
             
     
             cell.itemName.text = item.name
@@ -193,6 +187,18 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                                         vegan: data["vegan", default: false] as? Bool,
                                         gf: data["gf", default: false] as? Bool,
                                         vegetarian: data["vegetarian", default: false] as? Bool)
+                    // Setup Dietary Images
+                    if item.vegetarian ?? false && !(item.vegan ?? false) {
+                        item.dietaryImages.append(self.vegetarianImage)
+                    } else if !(item.vegetarian ?? false) && item.vegan ?? false {
+                        item.dietaryImages.append(self.veganImage)
+                    }
+                    if item.gf ?? false {
+                        item.dietaryImages.append(self.gfImage)
+                    }
+                    if item.pescatarian ?? false {
+                        item.dietaryImages.append(self.pescatarianImage)
+                    }
                     if menu[itemType] == nil {
                         // Item type exists in datastructure
                         menu[itemType] = [item]
@@ -211,7 +217,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             for item in value {
                 if item.imageString != nil {
                     group.enter()
-                    // TODO: Fix Concurrency issue, setting of data needs to happen after image read
                     let storageRef = Storage.storage().reference(forURL: item.imageString!)
                     storageRef.getData(maxSize: item.MAX_IMAGE_SIZE) { (data, error) in
                         if error != nil {
@@ -222,7 +227,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                         }
                         group.leave()
                     }
-
                 }
             }
             self.tableViewData.append(cellData(opened: false, title: key, data: value))

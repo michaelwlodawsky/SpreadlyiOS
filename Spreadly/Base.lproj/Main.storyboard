@@ -7,6 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Jost-VariableFont_wght.ttf">
+            <string>Jost-Regular</string>
+            <string>Jost-Regular_Bold</string>
+        </array>
         <array key="Yellowtail-Regular.ttf">
             <string>Yellowtail-Regular</string>
         </array>
@@ -20,55 +24,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Spreadly!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVb-R5-CSP">
-                                <rect key="frame" x="20" y="155" width="374" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Yellowtail-Regular" family="Yellowtail" pointSize="46"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start by scanning a QR Code at your favorite restuarant!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-YH-Dsp">
-                                <rect key="frame" x="20" y="362" width="374" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-eA-JMt">
-                                <rect key="frame" x="159" y="241.5" width="97" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-eA-JMt">
+                                <rect key="frame" x="102" y="296.5" width="210" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="32d-RN-pOl"/>
+                                    <constraint firstAttribute="height" constant="210" id="gKd-52-IMK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="0.71016160102739723" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="camera.circle.fill" catalog="system"/>
                                 <connections>
                                     <segue destination="Qrj-UN-xiB" kind="show" id="SaL-eg-gMC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNp-8o-CjJ">
-                                <rect key="frame" x="98" y="343" width="218" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click here to open your camera!">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Qrj-UN-xiB" kind="show" id="9a1-qM-ZU3"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by scanning a QR Code at your favorite restaurant." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8g-vp-0tP">
+                                <rect key="frame" x="46.5" y="665" width="321" height="66.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="bP2-Eu-Sq5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Virtual Menus!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-YH-Dsp">
+                                <rect key="frame" x="103" y="610" width="208.5" height="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Jost-Regular_Bold" family="Jost" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spreadly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVb-R5-CSP">
+                                <rect key="frame" x="106.5" y="118" width="201.5" height="78"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="7oe-RJ-vkd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Yellowtail-Regular" family="Yellowtail" pointSize="63"/>
+                                <color key="textColor" red="0.23529411764705882" green="0.77647058823529413" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.24313725490196078" green="0.85490196078431369" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.17599999999999999" green="0.55000000000000004" blue="0.35053333330000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yVb-R5-CSP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="23K-TH-QJa"/>
+                            <constraint firstItem="yVb-R5-CSP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2r8-26-aK6"/>
+                            <constraint firstItem="F8g-vp-0tP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bb6-2S-6Oy"/>
+                            <constraint firstItem="hGu-YH-Dsp" firstAttribute="top" secondItem="LQ4-eA-JMt" secondAttribute="bottom" constant="104" id="Oqu-ff-vE5"/>
+                            <constraint firstItem="LQ4-eA-JMt" firstAttribute="top" secondItem="yVb-R5-CSP" secondAttribute="bottom" constant="100" id="PRx-jf-fHs"/>
+                            <constraint firstItem="LQ4-eA-JMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZi-12-HZP"/>
+                            <constraint firstItem="F8g-vp-0tP" firstAttribute="top" secondItem="hGu-YH-Dsp" secondAttribute="bottom" constant="23" id="se2-ta-6qF"/>
+                            <constraint firstItem="hGu-YH-Dsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="snG-yx-NtS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="mGX-Dr-tL9"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="mGX-Dr-tL9">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="125.89285714285714"/>
         </scene>
-        <!--Menu-->
+        <!--Menu View Controller-->
         <scene sceneID="mrx-Zr-ezr">
             <objects>
                 <viewController storyboardIdentifier="menuVC" id="8Nt-mw-Vfu" customClass="MenuViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,7 +229,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJv-89-ao3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="RAT-v2-XO3"/>
+                    <navigationItem key="navigationItem" id="RAT-v2-XO3"/>
                     <connections>
                         <outlet property="tableView" destination="DGW-XN-Eja" id="m1J-ok-5ZY"/>
                         <segue destination="lHK-kd-AhV" kind="popoverPresentation" identifier="menuDetail" popoverAnchorView="Mr5-oQ-AlN" id="vSF-hn-eoQ">
@@ -349,6 +368,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sd-y5-2Bn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.17599999999999999" green="0.55000000000000004" blue="0.35053333330000003" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Yellowtail-Regular" family="Yellowtail" pointSize="32"/>
                             <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -370,10 +390,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gxu-lv-Myw" customClass="TabViewController" customModule="Spreadly" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Spreadly" id="skD-hp-irq"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHa-CE-CjZ">
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oHa-CE-CjZ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.17599999999999999" green="0.55000000000000004" blue="0.35053333330000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.17599999999999999" green="0.55000000000000004" blue="0.35053333330000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <outlet property="TitleItem" destination="skD-hp-irq" id="OVS-9h-Tat"/>
@@ -385,9 +408,7 @@
             <point key="canvasLocation" x="1047.8260869565217" y="125.89285714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9a1-qM-ZU3"/>
-    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.17599999999999999" green="0.55000000000000004" blue="0.35053333330000003" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <image name="GF.png" width="1190.6400146484375" height="1683.8399658203125"/>
         <image name="Pescatarian.png" width="1190.6400146484375" height="1683.8399658203125"/>

@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-let spreadlyGreen = UIColor(hue: 146.0, saturation: 68.0, brightness: 55.0, alpha: 1.0)
+let spreadlyGreen = UIColor(red: 45, green: 140, blue: 89, alpha: 1)
+
 var sView: UIView?
 
 extension UIViewController {

@@ -36,7 +36,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.tableFooterView = UIView()
         let backButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(back))
         self.navigationItem.leftBarButtonItem = backButton
-        
+                
         let dispatchGroup = DispatchGroup()
 
         

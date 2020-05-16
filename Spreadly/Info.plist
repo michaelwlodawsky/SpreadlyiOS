@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Jost-VariableFont_wght.ttf</string>
 		<string>Yellowtail-Regular.ttf</string>
 	</array>
 	<key>NSCameraUsageDescription</key>

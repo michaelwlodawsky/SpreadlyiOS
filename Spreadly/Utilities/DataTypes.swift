@@ -14,11 +14,6 @@ struct DietaryDetail {
     let VEGATARIAN: Int = 1
     let PESCATARIAN: Int = 2
     let GLUTEN_FREE: Int = 3
-  
-//    let VEGAN: String = "vegan"
-//    let VEGATARIAN: String = "vegetarian"
-//    let PESCATARIAN: String = "pescatarian"
-//    let GLUTEN_FREE: String = "gf"
     
     let imageArray: [UIImage?] = [
         UIImage(named: "Vegan.png"),

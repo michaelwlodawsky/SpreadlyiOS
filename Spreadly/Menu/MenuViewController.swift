@@ -138,7 +138,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             
     
             cell.itemName.text = item.name
-            cell.itemPrice.text = String(format: "$%0.2f", item.price)
+            cell.itemPrice.text = item.price
             cell.itemDescription.text = item.description ?? ""
             cell.itemImage.image = item.image ?? UIImage(named: "Default.png")
             
@@ -172,13 +172,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let data = document.data()
                     // Conform each menu item to Data Structure { type: [MenuItem], type: [MenuItem], ... }
                     let itemType = data["type"] as! String
-                    var price: Float = 0.0
-                    if let number = data["price"] as? NSNumber {
-                        price = number.floatValue
-                    }
+                    
                     let item = MenuItem(name: document.documentID,
                                         type: itemType,
-                                        price: price,
+                                        price: data["price"] as! String,
                                         imageString: data["image", default: ""] as? String,
                                         description: data["description", default: ""] as? String,
                                         ingredients: data["ingredients", default: []] as? [String],

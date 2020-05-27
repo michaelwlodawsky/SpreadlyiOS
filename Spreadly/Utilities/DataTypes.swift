@@ -29,7 +29,7 @@ class MenuItem {
     
     var name: String = ""
     var type: String = ""
-    var price: Float = 0.0
+    var price: String = ""
     
     // Optionals
     var dietaryImages: [UIImage] = []
@@ -45,7 +45,7 @@ class MenuItem {
     
     init(name: String,
          type: String,
-         price: Float,
+         price: String,
          imageString: String?,
          description: String?,
          ingredients: [String]?,

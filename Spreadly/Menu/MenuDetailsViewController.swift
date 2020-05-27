@@ -25,7 +25,7 @@ class MenuDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         itemDescription.text = item?.description
-        itemPrice.text = String(format: "$%0.2f", item!.price)
+        itemPrice.text = item?.price
         itemTitle.text = item?.name
         imageView.image = item?.image ?? UIImage(named: "Default.png")
         
